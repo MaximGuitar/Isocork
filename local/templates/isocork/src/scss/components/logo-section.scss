@@ -1,0 +1,29 @@
+.logo-section{
+	padding: rem(230) 0 rem(288);
+	&__logo{
+		width: rem(862);
+		height: rem(187);
+		margin: 0 auto rem(70);
+		fill: $main;
+	}
+	&__title{
+		color: $main;
+		font-size: rem(52);
+		line-height: 1;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1279px){
+	.logo-section{
+		padding: mrem(70) 0 mrem(98);
+		&__logo{
+			width: mrem(220);
+			height: mrem(48);
+			margin-bottom: mrem(18);
+		}
+		&__title{
+			font-size: mrem(14);
+		}
+	}
+}

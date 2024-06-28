@@ -1,0 +1,114 @@
+.my_surface__sp-result .my_surface__sp-item {
+    cursor: pointer;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 2fr;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.my_surface__sp-result {
+    margin-top: 20px;
+}
+
+.sp-panel {
+    width: 50%;
+}
+
+.my_surface__sp-field-row .sp-field {
+    display: flex;
+}
+
+.my_surface__sp-item-title {
+    width: 50%;
+}
+
+.my_surface__sp-item-image,
+.my_surface__sp-item-modal-image {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.trumbowyg-box {
+    width: 50%;
+}
+
+.my_surface__sp-item-image img,
+.my_surface__sp-item-modal-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    max-width: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.my_surface__sp-field-row .sp-item-del,
+.my_surface__sp-field-row .my_surface__sp-item-del {
+    width: auto;
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+}
+
+.my_surface__sp-file,
+.my_surface__sp-item-modal-file {
+    min-width: 150px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: #3f4b54;
+    padding: 6px 15px 5px;
+    line-height: 16px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 0;
+    -webkit-box-shadow: 0 0 1px rgb(0 0 0 / 11%), 0 1px 1px rgb(0 0 0 / 30%), inset 0 1px #fff, inset 0 0 1px rgb(255 255 255 / 50%);
+    box-shadow: 0 0 1px rgb(0 0 0 / 30%), 0 1px 1px rgb(0 0 0 / 30%), inset 0 1px 0 #fff, inset 0 0 1px rgb(255 255 255 / 50%);
+    background-color: #e0e9ec;
+    background-image: -webkit-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -moz-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -ms-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -o-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: linear-gradient(bottom, #d7e3e7, #fff) !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    height: 18px;
+    text-shadow: 0 1px rgb(255 255 255 / 70%);
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.my_surface__sp-file input[type=file],
+.my_surface__sp-item-modal-file input[type=file] {
+    cursor: pointer;
+    direction: ltr;
+    font-size: 200px !important;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.my_surface__sp-item-del-file {
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+}
+
+.my_surface__sp-field-row .sp-title {
+    width: 40%;
+}
+
+@media (max-width: 992px) {
+    .my_surface__sp-result .my_surface__sp-item {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}

@@ -1,0 +1,216 @@
+.content{
+    &__block{
+        margin: rem(65) 0;
+    }
+    &__container{
+        max-width: 83%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__gallery{
+        display: grid;
+        gap: rem(20);
+        &--6{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &--4{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &--3{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__text-underline{
+        padding-bottom: rem(4);
+        border-bottom: 1px solid $main;
+    }
+    &__quote{
+        padding-left: rem(30);
+        border-left: 1px solid $main;
+        &-text{
+            font-size: rem(15);
+            line-height: 1.35;
+            letter-spacing: 0.02em;
+        }
+        &-caption{
+            margin-top: rem(8);
+            font-style: italic;
+            letter-spacing: 0.02em;
+        }
+    }
+    &__files{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: rem(16);
+    }
+    &__image-block{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: rem(40);
+    }
+    & > section:first-of-type{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    & > section:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+.content-file{
+    display: flex;
+    align-items: flex-start;
+    padding-left: rem(20);
+    &__info{
+        display: flex;
+        align-items: center;
+        flex: 0 0 20%;
+        padding: 0 rem(22) 0 0;
+    }
+    &__meta{
+        color: $main;
+        transition: color $tr-time;
+    }
+    &__icon{
+        width: rem(41);
+        height: rem(41);
+        margin-right: rem(14);
+    }
+    &__name{
+        display: block;
+    }
+    $this: &;
+    &:hover{
+        color: $main;
+        #{$this}__meta{
+            color: $main;
+        }
+        #{$this}__icon{
+            fill: $main;
+        }
+    }
+}
+.gallery-item{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    &__wrap{
+			display: block;
+			padding-bottom: 55.2%;
+			position: relative;
+			background: #BEBEBE;
+			border: 1px solid #BEBEBE;
+			border-radius: rem(10);
+			overflow: hidden;
+			&--vertical{
+				padding-bottom: 138%;
+			}
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+    &__caption{
+        display: block;
+        margin-top: rem(12);
+        color: $main;
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($main, .8);
+        opacity: 0;
+        transition: opacity $tr-time;
+        &-icon{
+            width: rem(38);
+            height: rem(38);
+            fill: $main;
+        }
+    }
+    $this: &;
+    &:hover{
+        #{$this}__overlay{
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .content{
+        &__block{
+            margin-top: rem(45);
+            margin-bottom: rem(45);
+        }
+    }
+    .content-file{
+        &__info{
+            flex-basis: 33%;
+            padding-right: rem(12);
+        }
+    }
+    .feedback-form{
+        padding: rem(28) rem(32);
+        &__row{
+            display: block;
+        }
+        &__submit{
+            width: 100%;
+            margin: rem(10) 0 0;
+        }
+    }
+    .image-block{
+        column-gap: rem(25,16);
+        row-gap: rem(20,16);
+    }
+}
+@media (max-width: 991px) {
+    .content{
+        &__container{
+            max-width: 100%;
+        }
+        &__gallery{
+            column-gap: rem(12);
+            row-gap: rem(20);
+        }
+    }
+    .content-file{
+        padding-left: 0;
+    }
+}
+@media (max-width: 767px) {
+    .feedback-form{
+        display: block;
+        &__form-wrap{
+            margin: rem(14) 0 0;
+        }
+    }
+    .image-block{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 575px) {
+    .content{
+        &__gallery{
+            &--6,&--4,&--3{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    .content-file{
+        display: block;
+        &__name{
+            margin-top: rem(10);
+        }
+    }
+}

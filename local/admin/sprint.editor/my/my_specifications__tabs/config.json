@@ -1,0 +1,8 @@
+{
+  "title": "Характеристики (с табами)",
+  "sort": "930",
+  "templates": [
+    "tab.html",
+    "box.html"
+  ]
+}

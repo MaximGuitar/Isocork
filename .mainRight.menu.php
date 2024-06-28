@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Пробка", 
+		"/probka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нас", 
+		"/o-nas/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/gde-kupit/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Портфолио", 
+		"/primery-rabot/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

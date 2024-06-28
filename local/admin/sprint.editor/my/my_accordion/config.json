@@ -1,0 +1,8 @@
+{
+  "title": "Аккордеон",
+  "sort": "10",
+  "templates": [
+    "tab.html",
+    "box.html"
+  ]
+}

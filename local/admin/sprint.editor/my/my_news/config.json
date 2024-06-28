@@ -1,0 +1,9 @@
+{
+  "title": "Новости",
+  "sort": "50",
+  "templates": [
+    "select.html"
+  ],
+  "js": [
+  ]
+}

@@ -1,0 +1,26 @@
+<div data-uid="{{!it.uid}}" class="my_applicationation__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_applicationation__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_applicationation__sp-file">
+            <strong>Загрузить фото 1</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="my_applicationation__sp-item-image-icon">
+        {{?it.item.fileIcon && it.item.fileIcon.SRC}}
+            <img src="{{!it.item.fileIcon.SRC}}"/>
+        {{?}}
+        <div class="my_applicationation__sp-file-icon">
+            <strong>Загрузить фото 2</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="sp-field">
+        <input placeholder="Заголовок области" class="my_applicationation__sp-item-desc" type="text" value="{{!it.item.desc}}">
+        <input class="my_applicationation__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

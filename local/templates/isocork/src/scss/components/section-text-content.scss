@@ -1,0 +1,29 @@
+.section-text-content {
+    padding: rem(115) 0;
+
+    &__wrap {
+        width: 100%;
+        padding: 0 rem(98) 0 rem(110);
+    }
+}
+
+.content-news {
+    .section-text-content__wrap {
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 1279px) {
+    .section-text-content { 
+        padding: mrem(35) 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-text-content { 
+        &__wrap {
+            padding: 0;
+        }
+    }
+}

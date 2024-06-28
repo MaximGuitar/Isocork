@@ -1,0 +1,162 @@
+.section_circle_diagram{
+  margin: 0;
+  padding:  rem(120) 0;
+  background: #122223;
+  color: white;
+  .content_text_mobile{
+    display: none;
+  }
+  .active {
+    color: #FFFFFF;
+    background-color: #1E372A;
+    border-color: #1E372A;
+}
+.visible {
+ display: flex !important;
+} 
+.img{
+  width: 100%;
+}
+
+ .circle_title{
+ 
+  font-size: rem(56);
+  font-style: normal;
+  font-weight: 400; 
+  line-height: 135%;
+  text-align: center;
+ }
+ .button_circle{
+  padding-top: rem(33);
+  padding-bottom: rem(33);
+  border-radius: rem(70);
+  border: 1px white solid;
+  width: 100%;
+  height: rem(110);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: rem(36);
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: rem(36);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+  &:hover{
+    background: #EBA149;
+    border: 1px #EBA149 solid;
+    color:white;
+  }
+ }
+ .content_circle{
+  margin-top: rem(84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+
+ }
+ .main_block{
+  display: flex;
+  justify-content: center;
+ }
+ .diagram_circle{
+  margin-left: rem(197);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: rem(52);
+  display: none;
+  margin-right: rem(151);
+ }
+ .main_diagram{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .content_diagram{
+  position: absolute;
+  width: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .procent_text
+ {
+  font-family: Open Sans;
+  font-size: rem(86);
+  font-weight: 600;
+  line-height: rem(85);
+  letter-spacing: 0em;
+  text-align: center;
+
+ }
+
+ .content_text{
+  margin-top: rem(46);
+  p{
+    font-family: Inter;
+    font-size: rem(18);
+    font-weight: 400;
+    line-height: rem(27);
+    letter-spacing: 0em;
+    text-align: center;
+  }
+ }
+
+}
+
+@media (max-width: 1280px){
+  .section_circle_diagram{
+    .diagram_circle{
+      margin-left:rem(100) ;
+      margin-right: rem(50);
+    }
+  }
+}
+
+
+
+
+@media (max-width:  768px){
+  .section_circle_diagram{
+    padding: rem(48) 0;
+    .content_text_mobile{
+      display: block;
+      margin-top: rem(36);
+    }
+
+  
+    .content_diagram{
+      width: 50%;
+    }
+    .content_text{
+      display: none;
+    }
+    .main_block{
+      flex-direction: column;
+    }
+    .content_circle{
+      width: 100%;
+      margin-top: rem(42);
+      order: 2;
+    }
+    .diagram_circle{
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-right: 0px;
+      flex-direction: column;
+    }
+    .circle_title{
+ 
+      margin-bottom: 10px;
+    }
+  }
+}

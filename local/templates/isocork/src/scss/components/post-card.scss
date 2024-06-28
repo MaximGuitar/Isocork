@@ -1,0 +1,61 @@
+.post-card{
+	position: relative;
+	&__date{
+		margin-bottom: rem(15);
+		font-size: rem(28);
+		color: rgba(#000, .75);
+	}
+	&__title{
+		margin-bottom: rem(20);
+		font-size: rem(36);
+		line-height: 1;
+	}
+	&__img-wrap{
+		position: relative;
+		padding-bottom: 79%;
+		margin-bottom: rem(30);
+	}
+	&__img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+	&__desc{
+		font-size: rem(25);
+		line-height: 1.42;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+	&__desc, &__date{
+		transition: color $tr-time;
+	}
+	
+	$this: &;
+	&:hover{
+		#{$this}__title, #{$this}__date, #{$this}__desc{
+			color: $orange;
+		}
+	}
+}
+
+@media (max-width: 1279px){
+	.post-card{
+		&__date{
+			margin-bottom: mrem(7.5);
+			font-size: mrem(14);
+		}
+		&__title{
+			margin-bottom: mrem(10);
+			font-size: mrem(18);
+		}
+		&__desc{
+			font-size: mrem(13);
+		}
+	}
+}

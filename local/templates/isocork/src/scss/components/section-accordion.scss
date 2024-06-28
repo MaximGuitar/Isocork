@@ -1,0 +1,109 @@
+.section-accordion {
+    padding: rem(67) 0;
+
+    &__wrap {
+        padding-top: rem(27); 
+    }
+}
+
+.accordion {
+    $this:&;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-right: rem(44);
+        cursor: pointer;
+
+        @media (min-width: 1024px) {
+            &:hover {
+                #{$this}__title {
+                    color: $orange;
+
+                    &-svg {
+                        fill: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: rem(32);
+        line-height: 138%;
+        color: $text;
+        width: 86%;
+        transition: $tr-time;
+
+        &-svg {
+            min-width: rem(36);
+            width: rem(36);
+            min-height: rem(36);
+            height: rem(36);
+            fill: $text;
+            transition: $tr-time;
+        }
+    }
+
+    &__item {
+        border-top: 1px solid $text;
+        padding-top: rem(32);
+        padding-bottom: rem(49);
+
+        &.opened {
+            #{$this}__title-svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__content {
+        padding-top: rem(23);
+        padding-left: rem(43);
+        padding-right: rem(33);
+
+        .modal-text {
+            width: 89.4%;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+	.section-accordion {
+		padding: mrem(35) 0;
+    }
+
+    .accordion {
+        &__content {
+            padding-left: mrem(21);
+            padding-right: mrem(21);
+        }
+
+        &__title {
+            font-size: mrem(18);
+
+            &-svg {
+                min-width: mrem(16);
+                width: mrem(16);
+                min-height: mrem(16);
+                height: mrem(16);
+            }
+        }
+
+        &__top {
+            padding-right: mrem(5);
+        }
+
+        &__item {
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .accordion__content .modal-text {
+        width: 100%;
+    }
+}

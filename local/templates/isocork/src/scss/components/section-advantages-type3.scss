@@ -1,0 +1,132 @@
+.section-advantages-type3 {
+  padding: rem(90) 0 rem(120);
+  overflow: hidden;
+  background: $dark-green;
+
+  .title {
+    margin-bottom: rem(90);
+    color: $gold;
+  }
+}
+
+.advantages-type3-slider {
+  width: 89.75%;
+  margin: 0 rem(-30);
+
+  .swiper {
+    .swiper-wrapper{
+      margin-left: rem(110);
+    }
+    .orange_image1 {
+      position: absolute;
+      right: -15%;
+      top: 43%;
+      width: 76px;
+      height: 76px;
+      cursor: pointer;
+      z-index: 9999999999;
+
+      svg {
+        width: 76px;
+        height: 76px;
+      }
+    }
+    .orange_image2 {
+      position: absolute;
+      rotate: 180deg;
+      top: 43%;
+      width: 76px;
+      height: 76px;
+      cursor: pointer;
+      z-index: 9999999999;
+
+      svg {
+        width: 76px;
+        height: 76px;
+      }
+    }
+    overflow: visible;
+
+    &-slide {
+      padding: 0 rem(30);
+
+      &:not(.swiper-slide-visible) {
+        .advantage-type3 {
+          opacity: 0.15;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.advantage-type3 {
+  padding: rem(133) rem(26) rem(114);
+  position: relative;
+  color: #fff;
+  border: 1px solid #FFF;
+  transition: opacity $tr-time, border-color $tr-time;
+
+
+
+
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    background: rgba(#000, .35);
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  .num {
+    margin-bottom: rem(16);
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 1.48;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    min-height: rem(135);
+    padding-bottom: rem(20);
+    margin-bottom: rem(20);
+    font-size: rem(25);
+    font-weight: 500;
+    line-height: 1.48;
+    border-bottom: rem(4) solid #fff;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: 1.48;
+
+    .arr {
+      width: rem(21);
+      height: rem(11);
+      fill: #fff;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .orange_image1 {
+    display: none;
+  }
+  .orange_image2 {
+    display: none;
+  }
+}

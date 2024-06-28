@@ -1,0 +1,159 @@
+.section-do-posle {
+    padding: rem(115) 0;
+    overflow: hidden;
+
+    &__title {
+        margin-bottom: rem(70);
+    }
+
+    .keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+        overflow: visible !important;
+    }
+
+    .keen-slider:not([data-keen-slider-disabled]) {  
+        overflow: visible !important;
+    }
+
+    &__item {
+        width: 100%;
+
+        &-wrap {
+            width: 100%;
+            height: rem(600);
+            position: relative;
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: right top;
+        }
+
+        &-before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            z-index: 2;
+            width: 50%;
+            height: 100%;
+            .section-do-posle__item-image{
+                object-position: left top;
+                width: rem(1090);
+            }
+        }
+
+        &-after {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        &-change {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            z-index: 4;
+            width: 3px;
+            height: 100%;
+            background-color: #FFFFFF;
+
+            &-btn {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 100%;
+                width: rem(38);
+                height: rem(38);
+                background-color: #FFFFFF;
+                transform: translate(-50%, -50%);
+                padding: 0 rem(6);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                .change-arr {
+                    width: rem(8);
+                    height: rem(8);
+                    fill: $text;
+
+                    &--left {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        &-title {
+            text-align: center;
+            margin-top: rem(35);
+            font-size: rem(25);
+            line-height: 148%;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        padding: rem(30) rem(106);
+        margin-top: rem(86);
+        background: $main;
+
+        font-size: rem(25);
+        line-height: 148%;
+        text-align: center;
+        color: #EFC99B;
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(90);
+        --icon-width: #{rem(128)};
+		--icon-height: #{rem(15)};
+		--icon-color: #{$gold};
+
+        @media (max-width: 1279px) {
+            margin-top: mrem(50);
+        }
+
+		.slider-arrow{
+			&--right{
+				margin: 0 0 0 rem(91);
+
+                @media (max-width: 1279px) {
+                    margin: 0 0 0 mrem(42);
+                }
+			}
+		}
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-do-posle {
+        
+        padding: mrem(35) 0;
+
+        &__title {
+            margin-bottom: mrem(25);
+        }
+
+        &__arrows {
+            margin-top: mrem(50);
+        }
+       
+    }
+    // .section-projects__info{
+    //     margin-top: 26%;
+    // }
+}
+
+@media (max-width: 767px) {
+    .section-do-posle__text {
+        width: 100vw;
+        margin-left: -21px;
+        padding: mrem(35) mrem(21) mrem(29);
+    }
+}

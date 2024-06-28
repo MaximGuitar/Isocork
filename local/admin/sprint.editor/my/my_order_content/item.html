@@ -1,0 +1,24 @@
+<div data-uid="{{!it.uid}}" class="my_order_content__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div><h3>Выполняемое действие</h3></div>
+    <strong>Загрузить иконку</strong>
+    <div class="my_order_content__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_order_content__sp-file">
+            <strong>Загрузить иконку</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+    <strong>Текст слайда</strong>
+    <input placeholder="Текст слайда" class="my_order_content__sp-item-title" type="text" value="{{!it.item.specificationKey}}">
+    <!-- <input placeholder="Текст модального окна (подробнее)" class="my_order_content__sp-item-value" type="textarea" value="{{!it.item.specificationValue}}"> -->
+    <strong>Текст модального окна</strong>
+    <div class="sp-field">
+        <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+        <input class="my_order_content__sp-item-value" type="button" value="x" title="Удалить">
+    </div>
+
+
+    <input class="my_order_content__sp-item-del" type="button" value="x" title="Удалить">
+</div>

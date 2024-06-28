@@ -1,0 +1,41 @@
+.square-link-block{
+  position: relative;
+  .link{
+    display: block;
+    margin-top: rem(30);
+    font-size: rem(19);
+    line-height: 1.3;
+    text-align: center;
+  }
+  .bg{
+    z-index: 0;
+  }
+  .img-wrap{
+    position: relative;
+    padding-bottom: 100%;
+    background: $gold;
+  }
+  .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color: #000000, $alpha: 0.75);
+    opacity: 0;
+    transition: opacity $tr-time;
+  }
+  .link{
+    &:hover{
+      color: $text;
+    }
+  }
+  &:hover{
+    .cover{
+      opacity: 1;
+    }
+  }
+}

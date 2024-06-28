@@ -1,0 +1,147 @@
+.my_order__sp-result .my_order__sp-item {
+    cursor: pointer;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.my_order__sp-field-row .sp-title {
+    width: 50%;
+    padding-right: 0;
+}
+
+.my_order__sp-item-modal-image {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.my_order__sp-result {
+    margin-top: 20px;
+}
+
+.sp-panel {
+    width: 50%;
+}
+
+.sp-source {
+    margin: 10px 0;
+}
+
+.my_order__sp-field-row .sp-field {
+    display: flex;
+}
+
+.my_order__sp-item-image {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background: #e5ecee;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.my_order__sp-item-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    max-width: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.my_order__sp-field-row .sp-item-del,
+.my_order__sp-field-row .my_order__sp-item-del {
+    width: auto;
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+}
+
+.my_order__sp-inputs {
+    width: 50%;
+}
+
+.my_order__sp-inputs:first-child {
+    margin-right: 10px;
+}
+
+.my_order__sp-word-bg,
+.my_order__sp-title {
+    width: 90%;
+}
+
+.my_order__sp-item-desc {
+    width: 100%;
+}
+
+.my_order__sp-file,
+.my_order__sp-item-modal-file {
+    max-width: 150px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: #3f4b54;
+    padding: 6px 15px 5px;
+    line-height: 16px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 0;
+    -webkit-box-shadow: 0 0 1px rgb(0 0 0 / 11%), 0 1px 1px rgb(0 0 0 / 30%), inset 0 1px #fff, inset 0 0 1px rgb(255 255 255 / 50%);
+    box-shadow: 0 0 1px rgb(0 0 0 / 30%), 0 1px 1px rgb(0 0 0 / 30%), inset 0 1px 0 #fff, inset 0 0 1px rgb(255 255 255 / 50%);
+    background-color: #e0e9ec;
+    background-image: -webkit-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -moz-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -ms-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: -o-linear-gradient(bottom, #d7e3e7, #fff) !important;
+    background-image: linear-gradient(bottom, #d7e3e7, #fff) !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 18px;
+    height: 18px;
+    text-shadow: 0 1px rgb(255 255 255 / 70%);
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.my_order__sp-file input[type=file],
+.my_order__sp-item-modal-file input[type=file] {
+    cursor: pointer;
+    direction: ltr;
+    font-size: 200px !important;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+}
+
+.description__sp-field-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.description__sp-field-row .sp-text-description {
+    width: 60%;
+    margin-left: 5px;
+}
+
+.description__sp-field-row .sp-title {
+    width: 40%;
+}
+
+@media (max-width: 992px) {
+    .my_order__sp-result .my_order__sp-item {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}

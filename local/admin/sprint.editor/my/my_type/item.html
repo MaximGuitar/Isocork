@@ -1,0 +1,27 @@
+<div data-uid="{{!it.uid}}" class="my_type__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_type__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_type__sp-file">
+            <strong>Загрузить фото</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="my_type__sp-item-image-icon">
+        {{?it.item.fileIcon && it.item.fileIcon.SRC}}
+            <img src="{{!it.item.fileIcon.SRC}}"/>
+        {{?}}
+        <div class="my_type__sp-file-icon">
+            <strong>Загрузить иконку</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="sp-field">
+        <input placeholder="Заголовок типа" class="my_type__sp-item-desc" type="text" value="{{!it.item.desc}}">
+        <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+        <input class="my_type__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

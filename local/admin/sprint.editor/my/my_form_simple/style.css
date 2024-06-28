@@ -1,0 +1,14 @@
+.my_form_simple__sp-field-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.my_form_simple__sp-field-row .sp-text {
+    width: 60% !important;
+    margin-left: 5px;
+}
+
+.my_form_simple__sp-field-row .sp-title {
+    width: 40%;
+}

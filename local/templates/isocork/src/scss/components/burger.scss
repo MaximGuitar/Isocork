@@ -1,0 +1,83 @@
+$t: .4s;
+.burger{
+	position: relative;
+	cursor: pointer;
+	$this: &;
+	&__line{
+		display: block;
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		transition: background-color $tr-time;
+		&--cross{
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	}
+	&--opened{
+		#{$this}__line{
+			&:first-child, &:last-child{
+				opacity: 0;
+				transition: transform $t, opacity 0s $t, background-color $tr-time;
+			}
+			&:first-child,&:last-child{
+				transform: none;
+			}
+			&:nth-child(2){
+				transform: rotate(45deg);
+			}
+			&:nth-child(3){
+				transform: rotate(-45deg);
+			}
+			&--cross{
+				transition: transform $t $t, background-color $tr-time;
+			}
+		}
+	}
+	&--closed{
+		#{$this}__line{
+			&--cross{
+				transition: transform $t, background-color $tr-time;
+			}
+			&:first-child, &:last-child{
+				transition: transform $t $t, opacity 0s $t, background-color $tr-time;
+			}
+		}
+	}
+}
+.default-burger{
+	width: rem(50);
+	height: rem(23);
+	$this: &;
+	
+	&__line{
+		height: 1px;
+		background: #fff;
+		&:first-child{
+			transform: translateY(rem(-10));
+			transition: $tr-time;
+		}
+		&:last-child{
+			transform: translateY(rem(10));
+			transition: $tr-time;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		&:hover {
+			#{$this}__line{
+				&:first-child{
+					transform: translateY(rem(-15));
+				}
+				&:last-child{
+					transform: translateY(rem(15));
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+.section-map{
+	position: relative;
+	padding: rem(115) 0;
+	&__title{
+		max-width: 63%;
+		margin: 0 0 rem(70) auto;
+		text-align: right;
+	}
+	&__map{
+		margin-bottom: rem(86);
+		overflow: hidden;
+		svg{
+			width: 100%;
+			#lines{
+				path{
+					stroke: #878787;
+					stroke-dasharray: 100%;
+					animation: mapLines 5s linear 0s 1 normal forwards paused;
+				}
+			}
+		}
+		&.start-anim{
+			#lines{
+				path{
+					animation-play-state: running;
+				}
+			}
+		}
+	}
+	&__content{
+		width: 31.3%;
+		position: absolute;
+		bottom: rem(115);
+		left: 43.3%;
+	}
+	&__text{
+		font-size: rem(19);
+		line-height: 1.64;
+	}
+	&__link{
+		margin-top: rem(50);
+		padding-left: rem(20);
+		padding-right: rem(34);
+	}
+}
+
+@keyframes mapLines{
+	from{
+		stroke-dashoffset: 100%;
+	}
+	to{
+		stroke-dashoffset: 0%;
+	}
+}
+
+@media (max-width: 1279px){
+	.section-map{
+		padding: mrem(35) 0;
+		&__title{
+			max-width: 78%;
+			margin-bottom: mrem(25);
+		}
+		&__map{
+			margin-bottom: mrem(22);
+			overflow: auto;
+			svg{
+				width: mrem(1085);
+				height: mrem(340);
+			}
+		}
+		&__content{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			position: static;
+			padding: 0 21px;
+		}
+		&__text{
+			width: 79%;
+			font-size: mrem(10.5);
+			line-height: 1.48;
+			text-align: center;
+		}
+		&__link{
+			margin-top: mrem(35);
+		}
+	}
+}

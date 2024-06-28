@@ -1,0 +1,183 @@
+.section-video {
+    overflow: hidden;
+    padding: rem(103) 0;
+    &__slider {
+        &-thumbnail {
+            &-item {
+                height: rem(211);
+                border: 3px solid transparent;
+
+                &.active {
+                    border-color: #EBA149;
+                }
+            }
+        }
+
+        &-item {
+            display: grid;
+            column-gap: rem(90);
+            grid-template-columns: 44% 45%;
+        }
+    }
+
+    &__slide {
+        &-thumbnail {
+            &-preview {
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: rem(56);
+            line-height: 106.68%;
+            color: $text;
+            margin-bottom: rem(40);
+        }
+
+        &-preview {
+            height: rem(455);
+            position: relative;
+
+            iframe {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &-image {
+                height: 100%;
+                width: 100%;
+                z-index: 7;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                img {
+                    width: rem(151);
+                    height: rem(151);
+                    object-fit: contain;
+                    object-position: center;
+                    transition: $tr-time;
+                    cursor: pointer;
+
+                    @media (min-width: 1024px) {
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                &.video-play {
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: rem(26);
+            line-height: rem(35);
+            color: #808080;
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(70);
+        --icon-width: #{rem(135)};
+        --icon-height: #{rem(35)};
+        --icon-color: #{$gold};
+
+        @media (max-width: 1279px) {
+            margin-top: mrem(50);
+        }
+
+        .slider-arrow{
+            &--right{
+                margin: 0 0 0 rem(91);
+
+                @media (max-width: 1279px) {
+                    margin: 0 0 0 mrem(42);
+                }
+            }
+
+            @media (min-width: 1024px) {
+                &:not(.slider-arrow--disabled):hover {
+                    svg {
+                        fill: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    .keen-slider--big {
+        margin-bottom: rem(90);
+    }
+
+    .keen-slider--thumbnail {
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-video {
+        padding: mrem(35) 0;
+
+        &__slide {
+            &-title {
+                font-size: mrem(26);
+                margin-bottom: mrem(14);
+            }
+
+            &-text {
+                font-size: mrem(13);
+            }
+
+            &-preview {
+                height: mrem(200);
+            }
+        }
+
+        &__slider {
+            &-item {
+                grid-template-columns: 43.5% auto;
+                column-gap: mrem(25);
+                row-gap: mrem(44);
+            }
+
+            &-thumbnail-item {
+                height: mrem(82);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-video {
+        &__slider-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__slide {
+            &-content {
+                order: -1;
+            }
+        }
+    }
+}

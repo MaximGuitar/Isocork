@@ -1,0 +1,130 @@
+.section-specification {
+    padding: rem(115) 0;
+    .note_text{
+        font-family: Inter;
+        font-size: rem(14);
+        font-weight: 300;
+        line-height:  rem(20);
+        letter-spacing: 0em;
+        text-align: right;
+
+    }
+    .section-title {
+        &__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: rem(50);
+        }
+
+        width: 55%;
+    }
+
+    &__button {
+        padding: 0 rem(34);
+        &:first-of-type {
+            margin-left: auto;
+        }
+
+        &:not(:first-of-type) {
+            margin-left: rem(40);
+        }
+
+        &--download {
+            padding: 0 rem(49);
+        }
+    }
+
+    &__table-row {
+        display: grid;
+        grid-template-columns: 23.5% 58%;
+        column-gap: rem(40);
+        padding: rem(20) 0 rem(23);
+
+        &:not(:first-child) {
+            border-top: 1px solid rgba(18, 34, 35, 0.5);
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__table-column {
+        font-family: 'Inter';
+        font-weight: 300;
+        font-size: rem(19);
+        line-height: 145%;
+        color: $text;
+    }
+
+    &__btn-more {
+        display: flex;
+        align-items: center;
+        padding: rem(17) rem(34) rem(17) rem(18);
+
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: rem(30);
+        color: #122223;
+
+        margin: rem(30) auto 0;
+
+        transition: .3s;
+
+        .btn__arrow {
+            transform: rotate(90deg);
+            margin-right: rem(29);
+            width: rem(21);
+            height: rem(12);
+            fill: $text;
+            transition: .3s;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-specification {
+        padding: mrem(35) 0;
+
+        .section-title {
+            flex: 0 0 100%;
+            width: 100%;
+            margin-bottom: mrem(25);
+            
+            &__header {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__button {
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-specification {
+        &__table-row {
+            grid-template-columns: 35% auto;
+        }
+    }
+}
+
+@media (max-width: 592px) {
+    .section-specification {
+        .section-title__header {
+            flex-direction: column;
+        }
+
+        &__button {
+            width: 100%;
+
+            &:not(:first-of-type) {
+                margin-top: 15px;
+                margin-left: 0;
+            }
+        }
+    }
+}

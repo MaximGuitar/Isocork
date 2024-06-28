@@ -1,0 +1,62 @@
+.sp-block-my_project .sp-result {
+    position: relative;
+}
+
+.my_project__sp-field-row {
+    margin-bottom: 20px;
+}
+
+.sp-block-my_project .sp-filter {
+    display: block;
+}
+
+.sp-block-my_project.sp-show .sp-filter {
+    display: block;
+}
+
+.sp-block-my_project .sp-item {
+    padding: 6px;
+    margin: 0 0 5px 0;
+    cursor: move;
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+.sp-block-my_project .sp-title {
+    width: 90%;
+}
+
+.sp-block-my_project .sp-placeholder {
+    border: 1px dotted black;
+    padding: 6px;
+    margin: 0 0 5px 0;
+    height: 18px;
+}
+
+.sp-block-my_project .sp-elements {
+    background: #eee;
+    min-height: 100px;
+    padding: 5px 5px 10px;
+}
+
+.sp-block-my_project .sp-item.ui-draggable-dragging {
+    background: #FDBF3B;
+}
+
+.sp-block-my_project .sp-item.ui-sortable-helper {
+    background: #ccc;
+}
+
+.sp-block-my_project .sp-field {
+    margin-bottom: 10px;
+}
+
+.sp-block-my_project .sp-select-iblock {
+    width: 180px;
+}
+
+.sp-block-my_project .sp-filter {
+    margin-bottom: 10px;
+}

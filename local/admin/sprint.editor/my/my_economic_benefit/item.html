@@ -1,0 +1,15 @@
+<div data-uid="{{!it.uid}}" class="my_economic_benefit__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_economic_benefit__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+    
+    </div>
+
+    <div class="sp-field">
+        <input placeholder="Название материала" class="my_economic_benefit__sp-item-title" type="text" value="{{!it.item.MaterialName}}">
+        <input placeholder="Стоимость материала" class="my_economic_benefit__sp-item-material" type="text" value="{{!it.item.priceMaterial}}">
+        <input placeholder="Стоимость работ" class="my_economic_benefit__sp-item-work" type="text" value="{{!it.item.priceWork}}">
+        <input class="my_economic_benefit__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

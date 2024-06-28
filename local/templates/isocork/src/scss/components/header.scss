@@ -1,0 +1,137 @@
+.header{
+	height: rem(100);
+	position: fixed;
+	// position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	border-bottom: 2px solid rgba(#fff, .25);
+	transition-property: border-color, background-color;
+	transition-duration: $tr-time;
+	&__container{
+		display: flex;
+		align-items: center;
+		position: relative;
+		height: 100%;
+	}
+	&__logo{
+		display: block;
+		width: rem(202);
+		height: rem(44);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		fill: #fff;
+		&-icon{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__nav{
+		display: flex;
+		padding: 0 rem(40);
+		transition: opacity $tr-time;
+		&-link{
+			padding: 0 rem(20);
+			color: #fff;
+			font-size: rem(22);
+		}
+	}
+	&__calclink{
+		margin-left: auto;
+		color: #fff;
+		font-size: rem(22);
+		cursor: pointer;
+	}
+	&__tel{
+		margin-left: rem(40);
+		color: #fff;
+		font-size: rem(22);
+	}
+	&__btn{
+		margin-left: rem(40);
+		padding: 0 rem(61);
+		font-weight: 500;
+		font-size: rem(18);
+	}
+
+	&__mob-tel{
+		&-icon{
+			width: mrem(19);
+			height: mrem(19);
+			fill: #fff;
+		}
+	}
+
+	$this: &;
+	&.filled{
+		background: $beige;
+		border-color: $beige;
+		#{$this}__nav{
+			&-link{
+				color: $text;
+			}
+		}
+		#{$this}__logo{
+			&-icon{
+				fill: $text
+			}
+		}
+		#{$this}__tel{
+			color: $text;
+		}
+		#{$this}__calclink{
+			color: $text;
+		}
+		#{$this}__burger{
+			.burger__line{
+				background: $text;
+			}
+		}
+		#{$this}__btn{
+			background: $main;
+			border-color: $main;
+			&:hover{
+				background: $orange;
+				border-color: $orange;
+			}
+		}
+		#{$this}__mob-tel-icon{
+			fill: $text
+		}
+	}
+	&.menu-opened{
+		#{$this}__nav{
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+
+@media (min-width: 1280px){
+	.header{
+		&__mob-tel-icon{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1279px){
+	.header{
+		height: mrem(55);
+		&__nav, &__tel, &__btn, &__calclink{
+			display: none;
+		}
+		&__logo{
+			width: mrem(144);
+			height: mrem(31);
+		}
+		&__container{
+			justify-content: space-between;
+		}
+	}
+}

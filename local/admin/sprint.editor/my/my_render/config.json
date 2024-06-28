@@ -1,0 +1,8 @@
+{
+  "title": "Интерьер",
+  "sort": "40",
+  "templates": [
+    "tab.html",
+    "box.html"
+  ]
+}

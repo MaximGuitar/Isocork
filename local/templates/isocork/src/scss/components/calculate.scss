@@ -1,0 +1,225 @@
+.section-calculate {
+    padding: rem(133) 0 rem(26);
+
+    & + .content {
+        & > section:last-of-type:not(.section-form__container) {
+            padding-bottom: rem(64);
+        }
+    }
+}
+
+.calculate {
+    &-form {
+        padding-top: rem(49);
+        border-top: 3px solid #929292;
+        margin-top: rem(9);
+
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: rem(44);
+        }
+
+        &__filters {
+            // display: grid;
+            // grid-template-columns: 29% auto;
+            align-items: center;
+            column-gap: rem(38);
+            margin-bottom: rem(33);
+
+            &-select {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: rem(38);
+                margin-bottom: rem(-33);
+            }
+
+            &-title {
+                margin-bottom: rem(16);
+            }
+        }
+
+        &__result {
+            flex: 1 auto;
+            font-size: rem(34);
+            line-height: 128.6%;
+            color: $text;
+            margin-bottom: rem(40);
+
+            &-num {
+                //margin-left: rem(15);
+            }
+        }
+
+        &__params {
+            flex: 0 100%;
+            display: flex;
+            margin-top: rem(16);
+            flex-wrap: wrap;
+
+            &-item {
+                // display: flex;
+                align-items: center;
+                margin-bottom: rem(7);
+
+                &:not(:last-child) {
+                    margin-right: rem(62);
+                }
+
+                & > p {
+                    margin-bottom: rem(16);
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                &.disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        &__feedback {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: rem(28) rem(33);
+            grid-template-areas: "name  phone  personal"
+					 "mail  type  btn";
+
+            &-wrap {
+                padding-top: rem(50);
+                border-top: 1px solid $text;
+            }
+        }
+
+        &__form-elem {
+            height: rem(64);
+        }
+
+        &__personal {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        &__btn {
+            padding: 0 rem(24);
+            width: 100%;
+            margin-bottom: rem(30);
+        }
+
+        &__notes {
+            margin-bottom: rem(44);
+        }
+    }
+}
+
+.grid-area {
+    &--name {
+        grid-area: name;
+    }
+
+    &--phone {
+        grid-area: phone;
+    }
+
+    &--personal {
+        grid-area: personal;
+    }
+
+    &--mail {
+        grid-area: mail;
+    }
+
+    &--type {
+        grid-area: type;
+    }
+
+    &--btn {
+        grid-area: btn;
+    }
+}
+
+@media (max-width: 1279px) {
+    .calculate-form__btn {
+        margin-bottom: mrem(15);
+    }
+
+    .section-calculate {
+        padding-top: mrem(70);
+        padding-bottom: mrem(70);
+    }
+
+    .calculate-form__params-item:not(:last-child) {
+        margin-right: mrem(15);
+    }
+
+    .calculate-form {
+        padding-top: mrem(28);
+        margin-top: mrem(28);
+    }
+}
+
+@media (max-width: 992px) {
+    .calculate-form__feedback {
+        display: flex;
+        flex-direction: column;
+
+        .personal {
+            margin-bottom: mrem(20);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .calculate-form {
+        &__row {
+            flex-direction: column;
+        }
+
+        &__filters-select {
+            // width: 100%;
+            grid-template-columns: 1fr;
+        }
+
+        &__result {
+            padding-left: 0;
+        }
+
+        &__params {
+            flex-direction: column;
+
+            &-item:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: mrem(15);
+            }
+
+            &-item {
+                & > p {
+                    width: 100%;
+                }
+
+                & > input {
+                    width: 100%;
+                }
+            }
+
+            
+        }
+    }
+}
+
+@media (max-width: 582px) {
+    .calculate-form {
+        &__filters {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+        }
+
+        &__params-item > p {
+            width: 100%;
+        }
+    }
+}

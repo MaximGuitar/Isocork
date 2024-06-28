@@ -1,0 +1,14 @@
+<div class="my_project__sp-field-row">
+    <h3>Заголовок блока</h3>
+    <div>
+        <input class="sp-title" placeholder="Заголовок блока" type="text" value="{{!it.title}}" />
+    </div>
+
+    <h3>Тип блока</h3>
+    <select class="sp-select-type" data-type="{{!it.type}}">
+        <option value="type1" {{?it.type== "type1"}}selected="selected" {{?}}>В слайдере</option>
+        <option value="type2" {{?it.type== "type2"}}selected="selected" {{?}}>3 карточки в строке</option>
+    </select>
+</div>
+
+<div class="sp-result"></div>

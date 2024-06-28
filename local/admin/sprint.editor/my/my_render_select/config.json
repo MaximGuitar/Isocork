@@ -1,0 +1,9 @@
+{
+  "title": "Интерьеры (тип 2)",
+  "sort": "40",
+  "templates": [
+    "select.html"
+  ],
+  "js": [
+  ]
+}

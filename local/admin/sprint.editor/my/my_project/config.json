@@ -1,0 +1,9 @@
+{
+  "title": "Проекты",
+  "sort": "90",
+  "templates": [
+    "select.html"
+  ],
+  "js": [
+  ]
+}

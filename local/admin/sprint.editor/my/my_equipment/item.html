@@ -1,0 +1,20 @@
+<div data-uid="{{!it.uid}}" class="my_equipment__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_equipment__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+        <img src="{{!it.item.file.SRC}}" />
+        {{?}}
+        <div class="my_equipment__sp-file">
+            <strong>Загрузить фото</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="sp-field">
+        <input placeholder="Текст" class="my_equipment__sp-item-title" type="text" value="{{!it.item.equipmentName}}">
+        <strong>Текст модального окна</strong>
+        <div class="sp-field">
+            <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+        </div>
+        <input class="my_equipment__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

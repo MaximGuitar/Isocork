@@ -1,0 +1,18 @@
+<div data-uid="{{!it.uid}}" class="my_advantages_type3__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_advantages_type3__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_advantages_type3__sp-file">
+            <strong>Загрузить фото</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="sp-field">
+        <input placeholder="Текст слайда" class="my_advantages_type3__sp-item-title" type="text" value="{{!it.item.advanatageName}}">
+        <input placeholder="Заголовок действия" class="my_advantages_type3__sp-item-title-action" type="text" value="{{!it.item.actionName}}">
+        <input placeholder="Текст действия" class="my_advantages_type3__sp-item-action" type="text" value="{{!it.item.action}}">
+        <input class="my_advantages_type3__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

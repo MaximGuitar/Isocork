@@ -1,0 +1,19 @@
+<div data-uid="{{!it.uid}}" class="my_order__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_order__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_order__sp-file">
+            <strong>Загрузить иконку</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+    <input placeholder="Заголовок шага" class="my_order__sp-item-desc" type="text" value="{{!it.item.desc}}">
+    <input placeholder="Текст кнопки" class="my_order__sp-item-link-text" type="text" value="{{!it.item.linkText}}">
+    <!-- <input placeholder="Ссылка кнопки" class="my_order__sp-item-link" type="text" value="{{!it.item.link}}"> -->
+    <strong>Текст модального окна</strong>
+    <div class="sp-field">
+        <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+    </div>
+    <input class="my_order__sp-item-del" type="button" value="x" title="Удалить">
+</div>

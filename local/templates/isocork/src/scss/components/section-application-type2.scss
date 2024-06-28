@@ -1,0 +1,134 @@
+.section-application-type2 {
+    padding: rem(45) 0;
+    overflow: hidden;
+    position: relative;
+
+    &__title {
+        margin-bottom: rem(30); 
+    }
+    
+    &__text {
+        width: 75%;
+    }
+
+    &__container {
+        padding-left: 10.5%;
+    }
+
+    &__word {
+        font-weight: 400;
+        font-size: rem(135);
+        line-height: 100%;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #EFC99B;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        position: absolute;
+        top: 6%; 
+        left: rem(-58);
+    }
+
+    .keen-slider {
+        overflow: visible !important;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: rem(111);
+            left: -50vw;
+            width: 150vw;
+            height: 2px;
+            background: #CCC3BF;
+            z-index: -1;
+        }
+    }
+}
+
+.section-advantages-type2__slider {
+    width: 86.6%;
+    margin: 0 auto;
+}
+
+.slider-application-type2 { 
+    margin-top: rem(84);
+    margin-left: rem(-39);
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+            width: rem(194);
+            height: rem(194);
+            border-radius: 100%;
+            overflow: hidden;
+            margin-bottom: rem(28);
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-title {
+            font-weight: 300;
+            font-size: rem(18);
+            line-height: rem(22);
+            text-align: center;
+            color: $text; 
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(90);
+        --icon-width: #{rem(128)};
+		--icon-height: #{rem(15)};
+		--icon-color: #{$gold};
+
+        @media (max-width: 1279px) {
+            margin-top: mrem(50);
+        }
+
+		.slider-arrow{
+			&--right{
+				margin: 0 0 0 rem(91);
+
+                @media (max-width: 1279px) {
+                    margin: 0 0 0 mrem(42);
+                }
+			}
+		}
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-application-type2 {
+        padding: rem(35) 0;
+    }
+
+    .slider-application-type2 {
+        margin-top: mrem(50);
+    }
+}
+
+@media (max-width: 992px) {
+    .section-application-type2 {
+        &__word {
+            display: none;
+        }
+
+        &__container {
+            padding-left: 0;
+        }
+
+        &__text {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+<div data-uid="{{!it.uid}}" class="my_circle_diagram__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_circle_diagram__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_circle_diagram__sp-file">
+            <strong>Загрузить фото</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+
+    <div class="sp-field"> 
+        <input placeholder="Название компонента" class="my_circle_diagram__sp-item-desc" type="text" value="{{!it.item.desc}}">
+        <input placeholder="Текст компонента" class="my_circle_diagram__sp-item-desc1" type="text" value="{{!it.item.desc1}}">
+        <input placeholder="Процент от 100%" class="my_circle_diagram__sp-item-procent" type="text" value="{{!it.item.procent}}">
+    </div>
+  
+</div>

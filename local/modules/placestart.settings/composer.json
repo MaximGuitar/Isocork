@@ -1,0 +1,21 @@
+{
+    "name": "ps_kuzmin_i/assembling",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "PS\\Assembling\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    },
+    "require": {
+        "kint-php/kint": "*",
+        "phpmailer/phpmailer": "*",
+        "twig/twig": "*",
+        "vlucas/valitron": "*",
+        "vlucas/phpdotenv": "*"
+    }
+}

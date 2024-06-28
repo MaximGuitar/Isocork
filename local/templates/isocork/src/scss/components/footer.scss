@@ -1,0 +1,221 @@
+.footer{
+	position: relative;
+	padding: rem(78) 0 0;
+	color: $gold;
+	background: $text;
+	&__bottom{
+		display: flex;
+		padding: rem(180) 0 rem(31);
+	}
+	&__text{
+		font-size: rem(16);
+		&:not(:last-child){
+			margin: 0 rem(47) 0 0;
+		}
+	}
+	&__link{
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__ps-link{
+		display: flex;
+		align-items: center;
+		svg{
+			width: rem(123);
+			height: rem(25);
+			margin-left: rem(9);
+			fill: $gold;
+		}
+		&:hover{
+			svg{
+				fill: $orange;
+			}
+		}
+	}
+	&__to-top{
+		width: rem(150);
+		height: rem(150);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		&::before {
+			content: '';
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-style: solid;
+			border-width: 0 0 rem(150) rem(150);
+			border-color: transparent transparent $gold transparent;
+		}
+		&-text{
+			position: absolute;
+			bottom: 25%;
+			right: 10%;
+			transform: rotate(-45deg);
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: rem(17);
+			line-height: 1;
+			color: $text;
+		}
+		$this: &;
+		&:hover{
+			color: $text;
+			#{$this}-text{
+				text-decoration: underline;
+			}
+		}
+	}
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		padding-right: rem(162);
+	}
+	&__logo{
+		width: rem(301);
+		height: rem(66);
+		flex: 0 0 auto;
+		fill: $gold;
+	}
+	&__menu-col{
+		flex: 0 0 52.1%;
+		overflow: hidden;
+	}
+	&__products-link{
+		font-size: rem(22);
+		flex: 0 0 auto;
+		margin: 0 rem(70) rem(30) 0;
+	}
+	&__products-menu{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-70) rem(-30) 0;
+	}
+	&__contacts-col{
+		flex: 0 0 auto;
+	}
+	&__contact{
+		display: block;
+		margin-bottom: rem(8);
+		font-size: rem(22);
+	}
+	&__links{
+		display: flex;
+		margin-top: rem(38);
+	}
+	&__soc-link{
+		margin-right: rem(16);
+		svg{
+			display: block;
+			width: rem(43);
+			height: rem(43);
+			fill: $gold;
+		}
+		&:hover{
+			svg{
+				fill: $orange;
+			}
+		}
+	}
+	&__general-menu{
+		display: flex;
+		margin: rem(68) rem(-70) 0 0;
+	}
+	&__general-link{
+		font-size: rem(28);
+		margin-right: rem(70);
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__menu-col, &__contacts-col{
+		padding: rem(10) 0 0;
+	}
+}
+
+@media (max-width: 1279px){
+	.footer{
+		padding: mrem(45) 0 0;
+		&__text{
+			font-size: mrem(10);
+			&:not(:last-child){
+				margin: 0 mrem(14) mrem(14) 0;
+			}
+		}
+		&__products-menu{
+			margin: 0 mrem(-25) mrem(-25) 0;
+		}
+		&__general-menu{
+			margin: mrem(26) mrem(-25) 0 0;
+		}
+		&__general-link{
+			margin-right: mrem(25);
+			font-size: mrem(18);
+		}
+		&__products-link{
+			margin: 0 mrem(22) mrem(25) 0;
+			font-size: mrem(12);
+		}
+		&__contact{
+			margin-bottom: mrem(14);
+			font-size: mrem(12);
+		}
+		&__ps-link{
+			svg{
+				width: mrem(80);
+				height: mrem(16);
+				margin-left: mrem(4);
+			}
+		}
+		&__soc-link{
+			svg{
+				width: mrem(30);
+				height: mrem(30);
+			}
+		}
+		&__bottom{
+			width: 82%;
+			padding: mrem(45) 0 mrem(25);
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+		&__top{
+			padding-right: 0;
+			flex-direction: column;
+		}
+		&__to-top{
+			width: mrem(83);
+			height: mrem(83);
+		}
+		&__menu-col, &__contacts-col{
+			padding: mrem(45) 0 0;
+		}
+		&__links{
+			margin-top: mrem(14);
+		}
+		&__logo{
+			width: mrem(157);
+			height: mrem(35);
+		}
+	}
+}
+
+@media (max-width: 575px){
+	.footer{
+		&__bottom{
+			flex-direction: column;
+			width: 61%;
+			&::before{
+				border-width: 0 0 mrem(83) mrem(83);
+			}
+		}
+		&__text{
+			&:not(:last-child){
+				margin: 0 0 mrem(14) 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,257 @@
+.economic_benefit{
+   
+    .PriceLines{  
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: rem(53);
+        margin-right: rem(108);
+        white-space: nowrap;
+    }
+   .MaterialPriceLine{
+    .inter{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 10%;
+    }
+    justify-content: space-between;
+    min-width: 25% !important;
+    height:rem(55);
+    width: 40%;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1E372A;
+    white-space: nowrap;
+    position: relative;
+
+   }
+ 
+   .WorkPriceLine{
+    .inter{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 10%;
+    }
+    justify-content: space-between;
+    min-width: 25% !important;
+    color: white;
+    position: relative;
+    font-weight: 300;
+        background:#EBA149;
+        height:rem(55);
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   .FinalPrice{
+    font-weight: 500;
+    font-size: rem(36);
+    margin-left: rem(108);
+    align-self: center;
+    white-space: nowrap;
+   }
+   .benefitDiagramm{
+    display: flex;
+   }
+   .Material_name{
+    padding-right:rem(53);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: rem(460);
+    font-size: rem(36);
+    font-weight: 300;
+    text-align: end;
+
+   }
+   .green_cube{
+    width: rem(55);
+    height:rem(55);
+    background: #1E372A;
+    margin-right: rem(20);
+
+   }
+   .orange_cube{
+    width: rem(55);
+    height: rem(55);
+    background: #EBA149;
+    margin-right: rem(20);
+  
+   }
+   .info_block{
+    font-family: Inter;
+    font-size: rem(19);
+    font-weight: 300;
+    line-height: rem(19);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(37);
+   }
+   .cube{
+    p{
+        width: rem(123);
+    }
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    }
+   .cubes{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    width: rem(425);
+    p{
+        width: rem(123);
+    }
+   }
+   .pogonaj{
+    margin-left:rem( 480) ;
+    width: rem(295);
+    text-align: end;
+   }
+   .benefit_title{
+        width:rem( 900);
+        margin-bottom: rem(90);
+        margin-left: auto;
+        text-align: -webkit-right;
+     
+   }
+.benefit_img{
+    margin-top: rem(10);
+    margin-right: rem(10);
+    margin-bottom: rem(25);
+    top: rem(10);
+  right: rem(10);
+  cursor: pointer;
+    width: rem(20);
+    height: rem(20);
+
+}
+
+.benefit_img:hover+.material_info{
+    display: flex;
+}
+
+.material_info{
+    position: absolute;
+    border: 1px solid black;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: rem(503);
+    height: rem(55);
+    background-color: #fff;
+    z-index: 5;
+    display: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(20);
+    bottom: 120%;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainLines{
+    width: 60%;
+    padding: rem(20) 0;
+    border-left: 1px rgba(18, 34, 35, 0.5019607843) solid;
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 1279px) {
+    .MainLines{
+        border-left: none;
+        padding: rem(12) 0 rem(26) 0;
+    }
+    .benefit_img{
+        display: none;
+    }
+    
+    .MainLines{
+        order: 3;
+        width: 100%;
+    }
+    .benefitDiagramm{
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .pogonaj{
+        margin-left: 0;
+        text-align: start;
+    }
+    .info_block{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .Material_name{
+        font-size: rem(14);
+        font-weight: 300;
+        line-height: rem(14);
+        justify-content:flex-start;
+        padding-right:0;
+        width: 60%;
+        text-align: start;
+    }
+    .FinalPrice{
+        font-size: rem(22);
+        font-weight: 500;
+        line-height: rem(22);
+        margin-left: 0;
+    }
+    .cubes{
+        flex-direction: column;
+        align-items: self-start;
+        p{
+            width: 50%;
+            white-space: nowrap;
+        }
+    }
+    .info_block{
+        align-items: flex-start;
+    }
+    .benefit_title{
+        width: 90%;
+        font-size: rem(36);
+        font-weight: 400;
+        text-align: right;
+        word-wrap: break-word;
+        margin-bottom: rem(25);
+        hyphens: auto;
+    }
+    .cube:first-child{
+        margin-bottom: rem(12);
+        margin-top: rem(18);
+    }
+    .MaterialPriceLine{
+        height: rem(42);
+        .inter{
+            margin-left: 0;
+        }
+    }
+    .WorkPriceLine{
+        height: rem(42);
+        .inter{
+            margin-left: 0;
+        }
+    }
+    .PriceLines{
+     margin-left: 0; 
+       margin-right: 0;
+       width: 100% !important;
+    }
+    .cube{
+        justify-content: flex-start;
+    }
+}
+}

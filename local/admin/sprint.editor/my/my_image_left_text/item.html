@@ -1,0 +1,17 @@
+<div data-uid="{{!it.uid}}" class="my_image_left_text__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_image_left_text__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_image_left_text__sp-file">
+            <strong>Загрузить фото</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+           
+    </div>
+      
+    <div class="sp-field">
+        <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+        <input class="my_image_left_text__sp-item-del" type="button" value="x" title="Удалить">
+    </div>
+</div>

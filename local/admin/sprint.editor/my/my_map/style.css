@@ -1,0 +1,14 @@
+.my_map__sp-field-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.my_map__sp-field-row .sp-text {
+    width: 60% !important;
+    margin-left: 5px;
+}
+
+.my_map__sp-field-row .sp-title {
+    width: 40%;
+}

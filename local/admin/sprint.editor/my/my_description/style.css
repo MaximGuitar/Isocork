@@ -1,0 +1,14 @@
+.my_description__sp-field-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.my_description__sp-field-row .sp-text {
+    width: 60%;
+    margin-left: 5px;
+}
+
+.my_description__sp-field-row .sp-title {
+    width: 40%;
+}

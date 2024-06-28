@@ -1,0 +1,26 @@
+<div>
+    <h3>Заголовок блока</h3>
+</div>
+<div class="my_order_content__sp-field-row">
+    <input class="sp-title" placeholder="Заголовок блока" type="text" value="{{!it.title}}" />
+</div>
+
+<div>
+    <h3>Файл PDF</h3>
+</div>
+<div class="sp-field">
+    <div class="my_order_content__sp-file">
+        <strong>Загрузить</strong>&nbsp;
+        <input type="file" name="file" class="adm-designed-file" accept="application/pdf">
+    </div>
+    <div class="sp-field">
+        <input class="my_order_content__sp-item-del-file" type="button" value="x" title="Удалить">
+    </div>
+</div>
+
+<h4>Текст предупреждения</h4>
+<textarea class="sp-descr" placeholder="Текст">{{!it.descr}}</textarea>
+
+
+<div class="sp-acc-container"></div>
+<input class="sp-acc-add-tab" type="button" value="Добавить вид работы">

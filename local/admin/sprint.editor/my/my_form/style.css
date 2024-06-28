@@ -1,0 +1,17 @@
+.my_form__sp-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.my_form__sp-field-text .sp-subtitle {
+    width: 100%;
+    padding-right: 0 !important;
+}
+
+.my_form__sp-field-text .sp-title {
+    width: 100%;
+    padding-right: 0!important;
+}
+

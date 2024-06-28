@@ -1,0 +1,36 @@
+.sidebar {
+    &-list {
+        display: grid;
+        row-gap: rem(46);
+
+        &__item {
+            font-weight: 300;
+            font-size: rem(34);
+            line-height: 136.6%;
+            color: #EFC99B;
+        }
+    }
+}
+
+.page-sidebar__wrap {
+    position: sticky;
+    top: rem(140);
+    padding-bottom: rem(100);
+    left: 0;
+}
+
+@media (max-width: 1279px) {
+    .sidebar-list {
+        display: none; 
+    }
+
+    .page-sidebar__wrap {
+        padding-bottom: 0;
+        
+        .breadcrumbs--white {
+            --colorText: #000000;
+            --colorGrey: #6C6C6C;
+            --colorSeparation: #929292;
+        }
+    }
+}

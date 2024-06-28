@@ -1,0 +1,35 @@
+<div data-uid="{{!it.uid}}" class="my_advantages__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div class="my_advantages__sp-item-image">
+        {{?it.item.file && it.item.file.SRC}}
+            <img src="{{!it.item.file.SRC}}"/>
+        {{?}}
+        <div class="my_advantages__sp-file">
+            <strong>Загрузить иконку</strong>&nbsp;
+            <input type="file" name="file" class="adm-designed-file">
+        </div>
+    </div>
+    <div class="sp-field">
+        <input placeholder="Текст преимущества" class="my_advantages__sp-item-desc" type="text" value="{{!it.item.desc}}">
+    </div>
+    <h4>Информация для модального окна</h4>
+    <div></div>
+
+    <div class="my_advantages__sp-item-modal">
+        <div class="my_advantages__sp-item-modal-content">
+            <div class="my_advantages__sp-item-modal-image">
+                {{?it.item.modalImage && it.item.modalImage.SRC}}
+                    <img src="{{!it.item.modalImage.SRC}}"/>
+                {{?}}
+                <div class="my_advantages__sp-item-modal-file">
+                    <strong>Загрузить фото</strong>&nbsp;
+                    <input type="file" name="file" class="adm-designed-file">
+                </div>
+            </div>
+        </div>
+    </div>
+    <b>Текст модального окна</b>
+    <textarea placeholder="Текст" class="sp-text">{{!it.item.modalText}}</textarea>
+    <b>Текст блока при наведении</b>
+    <textarea placeholder="Текст блока при наведении" class="sp-text-hover">{{!it.item.hoverText}}</textarea>
+    <input class="my_advantages__sp-item-del" type="button" value="Удалить" title="Удалить">
+</div>

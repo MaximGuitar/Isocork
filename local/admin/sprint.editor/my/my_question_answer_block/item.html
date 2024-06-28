@@ -1,0 +1,12 @@
+<div data-uid="{{!it.uid}}" class="my_question_answer_block__sp-item {{?it.active}}sp-x-active{{?}}">
+    <div><h3>Текст вопроса</h3></div>
+    <div class="sp-field">
+        <input placeholder="Текст вопроса" class="my_question_answer_block__sp-item-desc" type="text" value="{{!it.item.desc}}">
+        
+    </div>
+    <strong>Ответ на вопрос</strong>
+    <div class="sp-field">
+        <textarea placeholder="Текст" class="sp-text">{{!it.item.text}}</textarea>
+    </div>
+    <input class="my_question_answer_block__sp-item-del" type="button" value="x" title="Удалить">
+</div>

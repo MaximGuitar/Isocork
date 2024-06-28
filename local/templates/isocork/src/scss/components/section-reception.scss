@@ -1,0 +1,14 @@
+.section-reception {
+    padding: rem(67) 0;
+
+    .contact-form {
+        width: 100%;
+        padding-top: rem(20);
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-reception {
+        padding: mrem(35) 0;
+    }
+}

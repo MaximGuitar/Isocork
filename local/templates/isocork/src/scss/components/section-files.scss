@@ -1,0 +1,114 @@
+.section-files {
+    padding: rem(115) 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(42) rem(46);
+
+        .file__item {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.file {
+    $this: &;
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: rem(42);
+        }
+
+        @media (min-width: 1024px) {
+            &:hover {
+                #{$this}__svg {
+                    fill: $orange;
+                }
+
+                #{$this}__title {
+                    color: $orange;
+                }
+
+                #{$this}__info {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    &__svg {
+        min-width: rem(42);
+        width: rem(42);
+        min-height: rem(57);
+        height: rem(57);
+        fill: $text;
+        margin-right: rem(18);
+        transition: $tr-time;
+    }
+
+    &__info {
+        font-weight: 300;
+        font-size: rem(19);
+        line-height: 144.1%;
+        color: #A0A0A0;
+        margin-right: rem(15);     
+        min-width: 16%;
+        width: 16%;
+        transition: $tr-time;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: rem(19);
+        line-height: 144.1%;
+        color: $text;
+        transition: $tr-time;
+    }
+}
+
+@media (max-width: 1279px) {
+    .section-files {
+        padding: mrem(35) 0; 
+
+        .file__info {
+            min-width: 25.6%;
+            width: 25.6%;
+        }
+    }
+
+    .file__item:not(:last-child) {
+        margin-bottom: mrem(35);
+    }
+}
+
+@media (max-width: 992px) {
+    .file {
+        &__item {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+    
+        &__info {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            flex: 0 70%;
+        }
+    
+        &__title {
+            flex: 0 100%;
+            margin-top: 15px;
+        }
+    }   
+}
+
+@media (max-width: 767px) {
+    .section-files {
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
